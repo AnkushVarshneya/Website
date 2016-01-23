@@ -50,8 +50,38 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		        </div>
 		        <!-- end personal info -->
 
+		        <!-- education info -->
+		        <?php
+		        //Pull education info from custom meta
+				$education_info = get_post_meta($post->ID,'resume_edu_',true);
+				if($education_info != '') {
+				?>
+		        <h2><?php _e("Education", "site5framework"); ?></h2>
+		        <div class="box clearfix">
 
+			        <?php
+						foreach ($education_info as $arr){
+						?>
+						<div class="col_half first">
+								<span class="job-period"><?php echo $arr['resume_edu_year'] ?></span>
+		               			<h3 class="job-title"><?php echo $arr['resume_edu_degree'] ?></h3>
+		               			<?php if($arr['resume_edu_url']!='') { ?>
+		               			<a class="job-url" href="<?php echo $arr['resume_edu_url'] ?>" target="_blank">
+		               				<?php echo $arr['resume_edu_school'] ?>
+		               			</a>
+		               			<?php } else { ?>
+		               				<?php echo $arr['resume_edu_school'] ?>
+		               			<?php } ?>
+		           			 </div>
+							<div class="col_half">
+							   <p><?php echo $arr['resume_edu_grade'] ?></p>
+							</div>
+					<?php }	?>
 
+		        </div>
+		        <?php } ?>
+		        <!-- end education info -->
+				
 		        <!-- employment info -->
 		        <?php 
 		        //Pull employment info from custom meta
@@ -86,38 +116,40 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		        <?php } ?>
 		        <!-- end employment info -->
 
-		        <!-- education info -->
-		        <?php
-		        //Pull education info from custom meta
-				$education_info = get_post_meta($post->ID,'resume_edu_',true);
-				if($education_info != '') {
+				<!-- project info -->
+		        <?php 
+		        //Pull project info from custom meta
+				$project_info = get_post_meta($post->ID,'resume_project_',true);
+				if($project_info != '') {
 				?>
-		        <h2><?php _e("Education", "site5framework"); ?></h2>
+		        <h2><?php _e("Applied Projects", "site5framework"); ?></h2>
 		        <div class="box clearfix">
 
-			        <?php
-						foreach ($education_info as $arr){
+					<?php
+						
+						foreach ($project_info as $arr){
 						?>
 						<div class="col_half first">
-								<span class="job-period"><?php echo $arr['resume_edu_year'] ?></span>
-		               			<h3 class="job-title"><?php echo $arr['resume_edu_degree'] ?></h3>
-		               			<?php if($arr['resume_edu_url']!='') { ?>
-		               			<a class="job-url" href="<?php echo $arr['resume_edu_url'] ?>" target="_blank">
-		               				<?php echo $arr['resume_edu_school'] ?>
+		               			<span class="project-period"><?php echo $arr['resume_project_fromdate'] ?> - <?php echo $arr['resume_project_todate'] ?></span>
+		               			<h3 class="project-title"><?php echo $arr['resume_project_title'] ?></h3>
+		               			<?php if($arr['resume_project_url']!='') { ?>
+		               			<a class="project-url" href="<?php echo $arr['resume_project_url'] ?>" target="_blank">
+		               				<?php echo $arr['resume_project_name'] ?>
 		               			</a>
 		               			<?php } else { ?>
-		               				<?php echo $arr['resume_edu_school'] ?>
+		               				<?php echo $arr['resume_project_name'] ?>
 		               			<?php } ?>
 		           			 </div>
 							<div class="col_half">
-							   <p><?php echo $arr['resume_edu_grade'] ?></p>
+							   <p><?php echo $arr['resume_project_description'] ?></p>
 							</div>
-					<?php }	?>
+					<?php } ?>
+
 
 		        </div>
 		        <?php } ?>
-		        <!-- end education info -->
-
+		        <!-- end project info -->
+				
 		        <?php 
 		        //Pull skill info from custom meta
 				$skill_info = get_post_meta($post->ID,'resume_skill_',true);
@@ -143,7 +175,41 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		        </div>
 		        <?php } ?>
 		        <!-- end skills -->
+				
+				<!-- volunteering info -->
+		        <?php 
+		        //Pull volunteering info from custom meta
+				$volunteering_info = get_post_meta($post->ID,'resume_volunteering_',true);
+				if($volunteering_info != '') {
+				?>
+		        <h2><?php _e("Volunteering", "site5framework"); ?></h2>
+		        <div class="box clearfix">
 
+					<?php
+						
+						foreach ($volunteering_info as $arr){
+						?>
+						<div class="col_half first">
+		               			<span class="volunteering-period"><?php echo $arr['resume_volunteering_fromdate'] ?> - <?php echo $arr['resume_volunteering_todate'] ?></span>
+		               			<h3 class="volunteering-title"><?php echo $arr['resume_volunteering_title'] ?></h3>
+		               			<?php if($arr['resume_volunteering_url']!='') { ?>
+		               			<a class="volunteering-url" href="<?php echo $arr['resume_volunteering_url'] ?>" target="_blank">
+		               				<?php echo $arr['resume_volunteering_name'] ?>
+		               			</a>
+		               			<?php } else { ?>
+		               				<?php echo $arr['resume_volunteering_name'] ?>
+		               			<?php } ?>
+		           			 </div>
+							<div class="col_half">
+							   <p><?php echo $arr['resume_volunteering_description'] ?></p>
+							</div>
+					<?php } ?>
+
+
+		        </div>
+		        <?php } ?>
+		        <!-- end volunteering info -->
+				
 		    </section>
 		</article>
 

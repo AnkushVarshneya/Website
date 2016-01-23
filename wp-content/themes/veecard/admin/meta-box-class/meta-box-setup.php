@@ -129,5 +129,69 @@ if (is_admin()){
 
   //Finish skills info meta mox decleration
   $my_meta4->Finish();
+  
+   //Volunteering info meta box config
+  $config5 = array(
+    'id' => 'volunteering',        			// meta box id, unique per meta box
+    'title' => 'Volunteering',         		// meta box title
+	  'pages' => array('resume'),      		// post types, accept custom post types as well, default is array('post'); optional
+    'context' => 'normal',					// where the meta box appear: normal (default), advanced, side; optional
+    'priority' => 'high',            		// order of meta box: high (default), low; optional
+    'fields' => array(),            		// list of meta fields (can be added by field arrays)
+    'local_images' => true,          		// Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => true          		//change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+  );
+
+
+  //Initiate Volunteering info meta box
+  $my_meta5 =  new AT_Meta_Box($config5);
+
+
+  //Volunteering info fields
+  $repeater_fields5[] = $my_meta5->addText($prefix.'volunteering_title',array('name'=> 'Volunteering Title '),true);
+  $repeater_fields5[] = $my_meta5->addTextarea($prefix.'volunteering_description',array('name'=> 'Volunteering Description '),true);
+  $repeater_fields5[] = $my_meta5->addDate($prefix.'volunteering_fromdate',array('name'=> 'Start Date '),true);
+  $repeater_fields5[] = $my_meta5->addDate($prefix.'volunteering_todate',array('name'=> 'End Date ', 'desc' =>'Use "PRESENT", if you are still Volunteering'),true);
+  $repeater_fields5[] = $my_meta5->addText($prefix.'volunteering_name',array('name'=> 'Volunteerers Name '),true);
+  $repeater_fields5[] = $my_meta5->addText($prefix.'volunteering_url',array('name'=> 'Volunteerers Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+
+  //Volunteering repeater block
+  $my_meta5->addRepeaterBlock($prefix.'volunteering_',array('inline' => true, 'name' => 'Enter your volunteering info','fields' => $repeater_fields, 'sortable'=> true));
+
+
+  //Finish Volunteering info meta mox decleration
+  $my_meta5->Finish();
+
+   //Project info meta box config
+  $config6 = array(
+    'id' => 'project', 		       			// meta box id, unique per meta box
+    'title' => 'Applied Projects',     		// meta box title
+	  'pages' => array('resume'),      		// post types, accept custom post types as well, default is array('post'); optional
+    'context' => 'normal',					// where the meta box appear: normal (default), advanced, side; optional
+    'priority' => 'high',            		// order of meta box: high (default), low; optional
+    'fields' => array(),            		// list of meta fields (can be added by field arrays)
+    'local_images' => true,          		// Use local or hosted images (meta box images for add/remove)
+    'use_with_theme' => true          		//change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+  );
+
+
+  //Initiate Project info meta box
+  $my_meta6 =  new AT_Meta_Box($config6);
+
+
+  //Project info fields
+  $repeater_fields6[] = $my_meta6->addText($prefix.'project_title',array('name'=> 'Project Title '),true);
+  $repeater_fields6[] = $my_meta6->addTextarea($prefix.'project_description',array('name'=> 'Project Description '),true);
+  $repeater_fields6[] = $my_meta6->addDate($prefix.'project_fromdate',array('name'=> 'Start Date '),true);
+  $repeater_fields6[] = $my_meta6->addDate($prefix.'project_todate',array('name'=> 'End Date ', 'desc' =>'Use "PRESENT", if you are still Project'),true);
+  $repeater_fields6[] = $my_meta6->addText($prefix.'project_name',array('name'=> 'Volunteerers Name '),true);
+  $repeater_fields6[] = $my_meta6->addText($prefix.'project_url',array('name'=> 'Volunteerers Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+
+  //Project repeater block
+  $my_meta6->addRepeaterBlock($prefix.'project_',array('inline' => true, 'name' => 'Enter your project info','fields' => $repeater_fields, 'sortable'=> true));
+
+
+  //Finish Project info meta mox decleration
+  $my_meta6->Finish();
 
 }
