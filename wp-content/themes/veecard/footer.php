@@ -10,7 +10,7 @@
                     <div id="social-icons" class="clearfix">
                         <ul id="social-links" class="clearfix">
                             <?php if(of_get_option('veecard_github')!='') : ?>
-                            <li class="github-link"><a href="<?php echo of_get_option('veecard_github') ?>" id="social-01" title="<?php _e( 'See my GitHub!', 'site5framework' ); ?>">GitHub</a></li>
+                            <li class="github-link"><a href="<?php echo of_get_option('veecard_github') ?>" class="github" id="social-01" title="<?php _e( 'See my GitHub!', 'site5framework' ); ?>">GitHub</a></li>
 							<?php endif ?>
                             <?php if(of_get_option('veecard_linkedin')!=''): ?>
                             <li class="linkedin-link"><a href="<?php echo of_get_option('veecard_linkedin') ?>" id="social-02" title="<?php _e( 'Connect with me on linkedin!', 'site5framework' ); ?>" class="linkedin">Linkedin</a></li>
@@ -25,19 +25,19 @@
                             <li class="google-link"><a href="<?php echo of_get_option('veecard_googleplus') ?>" id="social-05" title="<?php _e( 'Google+', 'site5framework' ); ?>" class="google">Google</a></li>
                             <?php endif ?>
 							<?php if(of_get_option('veecard_goodreads')!=''): ?>
-                            <li class="goodreads-link"><a href="<?php echo of_get_option('veecard_goodreads') ?>" id="social-06" title="<?php _e( 'See my reads!', 'site5framework' ); ?>" class="google">Good Reads</a></li>
+                            <li class="goodreads-link"><a href="<?php echo of_get_option('veecard_goodreads') ?>" class="goodreads" id="social-06" title="<?php _e( 'See my reads!', 'site5framework' ); ?>" class="google">Good Reads</a></li>
                             <?php endif ?>
 							<?php if(of_get_option('veecard_dribble')!=''): ?>
                             <li class="dribbble-link"><a href="<?php echo of_get_option('veecard_dribble') ?>" id="social-07" title="<?php _e( 'Dribble', 'site5framework' ); ?>" class="dribbble">Dribble</a></li>
                             <?php endif ?>
                             <?php if(of_get_option('veecard_vimeo')!=''): ?>
-                            <li class="vimeo-link"><a href="<?php echo of_get_option('veecard_vimeo') ?>" id="social-09" title="<?php _e( 'Vimeo', 'site5framework' ); ?>" class="vimeo">Vimeo</a></li>
+                            <li class="vimeo-link"><a href="<?php echo of_get_option('veecard_vimeo') ?>" id="social-08" title="<?php _e( 'Vimeo', 'site5framework' ); ?>" class="vimeo">Vimeo</a></li>
                             <?php endif ?>
                             <?php if(of_get_option('veecard_skype')!=''): ?>
-                            <li class="skype-link"><a href="<?php echo of_get_option('veecard_skype') ?>" id="social-10" title="<?php _e( 'Skype', 'site5framework' ); ?>" class="skype">Skype</a></li>
+                            <li class="skype-link"><a href="<?php echo of_get_option('veecard_skype') ?>" id="social-09" title="<?php _e( 'Skype', 'site5framework' ); ?>" class="skype">Skype</a></li>
                             <?php endif ?>
                             <?php if(of_get_option('veecard_pinterest')!=''): ?>
-                            <li class="pinterest-link"><a href="<?php echo of_get_option('veecard_pinterest') ?>" id="social-11" title="<?php _e( 'Pinterest', 'site5framework' ); ?>" class="pinterest">Pinterest</a></li>
+                            <li class="pinterest-link"><a href="<?php echo of_get_option('veecard_pinterest') ?>" id="social-10" title="<?php _e( 'Pinterest', 'site5framework' ); ?>" class="pinterest">Pinterest</a></li>
                             <?php endif ?>
                             <?php if(of_get_option('veecard_rss')=='1'): ?>
                                 <li class="rss-link"><a href="<?php echo of_get_option('veecard_extrss') ?  of_get_option('sc_extrss') : bloginfo('rss_url'); ?>" id="social-08" title="<?php _e( 'RSS', 'site5framework' ); ?>" class="rss">RSS Feeds</a></li>

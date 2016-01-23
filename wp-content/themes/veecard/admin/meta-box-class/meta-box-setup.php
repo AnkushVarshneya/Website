@@ -90,9 +90,9 @@ if (is_admin()){
 
   //Education info fields
   $repeater_fields1[] = $my_meta3->addText($prefix.'edu_degree',array('name'=> 'Degree '),true);
-  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_school',array('name'=> 'School '),true);
   $repeater_fields1[] = $my_meta3->addText($prefix.'edu_grade',array('name'=> 'Grade '),true);
-  $repeater_fields1[] = $my_meta3->addDate($prefix.'edu_year',array('name'=> 'Greduation Year '),true);
+  $repeater_fields1[] = $my_meta3->addDate($prefix.'edu_year',array('name'=> 'Graduation Year '),true);
+  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_school',array('name'=> 'School '),true);
   $repeater_fields1[] = $my_meta2->addText($prefix.'edu_url',array('name'=> 'School Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   //Education repeater block
