@@ -99,7 +99,7 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 						foreach ($education_info as $arr){
 						?>
 						<div class="col_half first">
-								<span class="job-period"><?php $arr['resume_edu_year'] ?></span>
+								<span class="job-period"><?php $arr['resume_edu_degree'] ?></span>
 		               			<h3 class="job-title"><?php echo $arr['resume_edu_degree'] ?></h3>
 		               			<?php if($arr['resume_edu_url']!='') { ?>
 		               			<a class="job-url" href="<?php echo $arr['resume_edu_url'] ?>" target="_blank">
