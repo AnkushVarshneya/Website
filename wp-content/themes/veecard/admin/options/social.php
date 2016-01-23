@@ -2,6 +2,16 @@
     $options[] = array( "name" => "Social",
     					"sicon" => "social.png",
 						"type" => "heading");
+						
+	$options[] = array( "name" => "GitHub URL",
+                        "id" => $shortname."_github",
+                        "std" => "",
+                        "type" => "text");
+						
+    $options[] = array( "name" => "LinkedIn URL",
+                        "id" => $shortname."_linkedin",
+                        "std" => "",
+                        "type" => "text");
 
     $options[] = array( "name" => "Twitter URL",
                         "id" => $shortname."_twitter",
@@ -18,6 +28,11 @@
                         "std" => "",
                         "type" => "text");
 
+	$options[] = array( "name" => "Good Reads URL",
+                        "id" => $shortname."_goodreads",
+                        "std" => "",
+                        "type" => "text");
+						
     $options[] = array( "name" => "Dribble URL",
                         "id" => $shortname."_dribble",
                         "std" => "",
@@ -30,11 +45,6 @@
 
     $options[] = array( "name" => "Skype URL",
                         "id" => $shortname."_skype",
-                        "std" => "",
-                        "type" => "text");
-
-    $options[] = array( "name" => "LinkedIn URL",
-                        "id" => $shortname."_linkedin",
                         "std" => "",
                         "type" => "text");
 
@@ -52,15 +62,5 @@
                         "desc" => "Add external RSS URL, like Feedburner, etc. This will overwrite the regular blog RSS, if enabled.",
                         "id" => $shortname."_extrss",
                         "std" => "",
-                        "type" => "text");
-						
-	$options[] = array( "name" => "GitHub URL",
-                        "id" => $shortname."_github",
-                        "std" => "",
-                        "type" => "text");
-						
-	$options[] = array( "name" => "Good Reads URL",
-                        "id" => $shortname."_goodreads",
-                        "std" => "",
-                        "type" => "text");
+                        "type" => "text");						
 ?>
