@@ -156,7 +156,7 @@ if (is_admin()){
   $repeater_fields5[] = $my_meta5->addText($prefix.'volunteering_url',array('name'=> 'Volunteerers Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   //Volunteering repeater block
-  $my_meta5->addRepeaterBlock($prefix.'volunteering_',array('inline' => true, 'name' => 'Enter your volunteering info','fields' => $repeater_fields, 'sortable'=> true));
+  $my_meta5->addRepeaterBlock($prefix.'volunteering_',array('inline' => true, 'name' => 'Enter your volunteering info','fields' => $repeater_fields5, 'sortable'=> true));
 
 
   //Finish Volunteering info meta mox decleration
@@ -188,7 +188,7 @@ if (is_admin()){
   $repeater_fields6[] = $my_meta6->addText($prefix.'project_url',array('name'=> 'Volunteerers Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   //Project repeater block
-  $my_meta6->addRepeaterBlock($prefix.'project_',array('inline' => true, 'name' => 'Enter your project info','fields' => $repeater_fields, 'sortable'=> true));
+  $my_meta6->addRepeaterBlock($prefix.'project_',array('inline' => true, 'name' => 'Enter your project info','fields' => $repeater_fields6, 'sortable'=> true));
 
 
   //Finish Project info meta mox decleration
