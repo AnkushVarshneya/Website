@@ -89,8 +89,11 @@ if (is_admin()){
   $my_meta3 =  new AT_Meta_Box($config3);
 
   //Education info fields
-  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_degree',array('name'=> 'School/Degree '),true);
+  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_degree',array('name'=> 'Degree '),true);
+  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_school',array('name'=> 'School '),true);
+  $repeater_fields1[] = $my_meta3->addText($prefix.'edu_grade',array('name'=> 'Grade '),true);
   $repeater_fields1[] = $my_meta3->addDate($prefix.'edu_year',array('name'=> 'Greduation Year '),true);
+  $repeater_fields1[] = $my_meta2->addText($prefix.'edu_url',array('name'=> 'School Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   //Education repeater block
   $my_meta3->addRepeaterBlock($prefix.'edu_',array('inline' => true, 'name' => 'Enter your education info','fields' => $repeater_fields1, 'sortable'=> true));

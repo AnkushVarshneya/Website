@@ -53,8 +53,14 @@
                         "id" => $shortname."_extrss",
                         "std" => "",
                         "type" => "text");
-
-
-
-
+						
+	$options[] = array( "name" => "GitHub URL",
+                        "id" => $shortname."_github",
+                        "std" => "",
+                        "type" => "text");
+						
+	$options[] = array( "name" => "Good Reads URL",
+                        "id" => $shortname."_goodreads",
+                        "std" => "",
+                        "type" => "text");
 ?>

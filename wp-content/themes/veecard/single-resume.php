@@ -97,13 +97,22 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 
 			        <?php
 						foreach ($education_info as $arr){
-						echo '<div class="col_half last">
-								<span class="job-period">'.$arr['resume_edu_year'].'</span>
-		               			<h3 class="job-education-title">'.$arr['resume_edu_degree'].'</h3>
-							 </div>
-							';
-						}
-					?>
+						?>
+						<div class="col_half first">
+								<span class="job-period"><?php $arr['resume_edu_year'] ?></span>
+		               			<h3 class="job-title"><?php echo $arr['resume_edu_degree'] ?></h3>
+		               			<?php if($arr['resume_edu_url']!='') { ?>
+		               			<a class="job-url" href="<?php echo $arr['resume_edu_url'] ?>" target="_blank">
+		               				<?php echo $arr['resume_edu_school'] ?>
+		               			</a>
+		               			<?php } else { ?>
+		               				<?php echo $arr['resume_edu_school'] ?>
+		               			<?php } ?>
+		           			 </div>
+							<div class="col_half">
+							   <p><?php echo $arr['resume_edu_grade'] ?></p>
+							</div>
+					<?php }	?>
 
 		        </div>
 		        <?php } ?>
