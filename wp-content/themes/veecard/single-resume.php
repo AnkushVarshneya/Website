@@ -133,7 +133,7 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 						
 							<?php
 								if ($arr['resume_project_fromdate'] != ''){
-									echo "<span class=\"project-period\"> $arr['resume_project_fromdate'] -  $arr['resume_project_todate']</span>"
+									echo "<span class='project-period'> $arr['resume_project_fromdate'] -  $arr['resume_project_todate']</span>"
 								}
 							?>
 		               			<h3 class="project-title"><?php echo $arr['resume_project_title'] ?></h3>
