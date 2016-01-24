@@ -130,7 +130,12 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 						foreach ($project_info as $arr){
 						?>
 						<div class="col_half first">
-		               			<span class="project-period"><?php echo $arr['resume_project_fromdate'] ?> - <?php echo $arr['resume_project_todate'] ?></span>
+						
+							<?php
+								if ($arr['resume_project_fromdate'] != ''){
+									echo "<span class=\"project-period\"> $arr['resume_project_fromdate'] -  $arr['resume_project_todate']</span>"
+								}
+							?>
 		               			<h3 class="project-title"><?php echo $arr['resume_project_title'] ?></h3>
 		               			<?php if($arr['resume_project_url']!='') { ?>
 		               			<a class="project-url" href="<?php echo $arr['resume_project_url'] ?>" target="_blank">

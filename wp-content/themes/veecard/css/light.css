@@ -10,7 +10,7 @@ a {
 a:hover {
 	color:#000;
 }
-h2, h3, .job-title, .job-education-title, .error, .thanks  {
+h2, h3, .job-title, .job-education-title, .project-title, .volunteering-title, .error, .thanks  {
 	color:#181818;
 }
 

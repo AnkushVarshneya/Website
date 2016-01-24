@@ -490,18 +490,18 @@ margin-right: 0 !important;
     margin-bottom: 20px;
 }
 
-.job-period {
+.job-period, .project-period, .volunteering-period {
     text-transform: uppercase;
     color:#0092C4;
     font-size: 11px;
 }
-.job-title, .job-education-title {
+.job-title, .project-title, .volunteering-title, .job-education-title {
     margin-bottom: 10px;
     margin-top: 0;
     color: #fff;
     font-weight: normal;
 }
-.job-url {
+.job-url, .project-url, .volunteering-title {
     font-size: 11px;
 }
 
