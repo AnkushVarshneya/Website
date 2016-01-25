@@ -1679,7 +1679,7 @@ blockquote:before {
 blockquote p:first-child {
   display: inline;
 }
-blockquote cite:before {
-	content: "\2014 \2009";
+blockquote cite {
+	display: inline;
+	color: #0092C4;
 }
-
