@@ -64,10 +64,10 @@ if (is_admin()){
   $repeater_fields[] = $my_meta2->addText($prefix.'job_url',array('name'=> 'Employer Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_reference_letter',array('name'=> 'Reference Letter Name '),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_reference_letter_url',array('name'=> 'Reference Letter Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_0',array('name'=> 'Intern Report Name '),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_0',array('name'=> 'Intern Report Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_1',array('name'=> 'Intern Report Name '),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_1',array('name'=> 'Intern Report Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_0',array('name'=> 'Intern Report Name 0'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_0',array('name'=> 'Intern Report Url 0', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_1',array('name'=> 'Intern Report Name 1'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_1',array('name'=> 'Intern Report Url 1', 'desc'=>'Make sure to include http:// in the URL'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_2',array('name'=> 'Intern Report Name '),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_2',array('name'=> 'Intern Report Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
   
