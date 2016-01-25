@@ -116,18 +116,18 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 							<?php if($arr['resume_job_intern_report_0']!='' && $arr['resume_job_intern_report_url_0']!='') { ?>
 							<p class = "job-url"><br/><br/>Find out more about what I did in this job by clicking the link(s) below:</p>
 							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_0'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_0'] ?> <br/>
-							</a>
+								<?php echo $arr['resume_job_intern_report_0'] ?>
+							</a> <br/>
 							<?php }?>
 							<?php if($arr['resume_job_intern_report_1']!='' && $arr['resume_job_intern_report_url_1']!='') { ?>
 							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_1'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_1'] ?> <br/>
-							</a>
+								<?php echo $arr['resume_job_intern_report_1'] ?>
+							</a> <br/>
 							<?php }?>
 							<?php if($arr['resume_job_intern_report_2']!='' && $arr['resume_job_intern_report_url_2']!='') { ?>
 							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_2'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_2'] ?> <br/>
-							</a>
+								<?php echo $arr['resume_job_intern_report_2'] ?>
+							</a> <br/>
 							<?php }?>
 						</div>
 						<div class="col_half">
