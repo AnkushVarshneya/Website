@@ -105,16 +105,16 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 							<?php } else { ?>
 								<?php echo $arr['resume_job_employer'] ?>
 							<?php } ?>
-							<br />
+							
 							<?php if($arr['resume_job_reference_letter']!='' && $arr['resume_job_reference_letter_url']!='') { ?>
-							<p class = "job-url"><br/> View my reference letter from this job by clicking the link(s) below:</p>
+							<p class = "job-url"><br/><br/>View my reference letter from this job by clicking the link(s) below:</p>
 							<a class="job-url" href="<?php echo $arr['resume_job_reference_letter_url'] ?>" target="_blank">
 								<?php echo $arr['resume_job_reference_letter'] ?>
 							</a>
 							<?php }?>
 							<br />
 							<?php if($arr['resume_job_intern_report_0']!='' && $arr['resume_job_intern_report_url_0']!='') { ?>
-							<p class = "job-url"><br/>Find out more about what I did in this job by clicking the link(s) below:</p>
+							<p class = "job-url"><br/><br/>Find out more about what I did in this job by clicking the link(s) below:</p>
 							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_0'] ?>" target="_blank">
 								<?php echo $arr['resume_job_intern_report_0'] ?> <br/>
 							</a>
