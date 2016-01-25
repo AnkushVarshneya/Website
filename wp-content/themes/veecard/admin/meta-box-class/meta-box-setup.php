@@ -68,8 +68,8 @@ if (is_admin()){
   $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_0',array('name'=> 'Intern Report Url 0', 'desc'=>'Make sure to include http:// in the URL'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_1',array('name'=> 'Intern Report Name 1'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_1',array('name'=> 'Intern Report Url 1', 'desc'=>'Make sure to include http:// in the URL'),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_2',array('name'=> 'Intern Report Name '),true);
-  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_2',array('name'=> 'Intern Report Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_2',array('name'=> 'Intern Report Name 2'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_intern_report_url_2',array('name'=> 'Intern Report Url 2', 'desc'=>'Make sure to include http:// in the URL'),true);
   
   //Employment repeater block
   $my_meta2->addRepeaterBlock($prefix.'job_',array('inline' => true, 'name' => 'Enter your job info','fields' => $repeater_fields, 'sortable'=> true));
