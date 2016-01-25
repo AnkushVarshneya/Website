@@ -63,7 +63,7 @@ if (is_admin()){
   $repeater_fields[] = $my_meta2->addText($prefix.'job_employer',array('name'=> 'Employer Name '),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_url',array('name'=> 'Employer Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_reference_letter',array('name'=> 'Reference Letter Name '),true);
-  $repeater_fields[][] = $my_meta2->addText($prefix.'job_reference_letter_url',array('name'=> 'Reference Letter Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_reference_letter_url',array('name'=> 'Reference Letter Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   
   //Employment repeater block
