@@ -55,7 +55,6 @@ if (is_admin()){
   //Initiate employment info meta box
   $my_meta2 =  new AT_Meta_Box($config2);
 
-
   //Employment info fields
   $repeater_fields[] = $my_meta2->addText($prefix.'job_title',array('name'=> 'Job Title '),true);
   $repeater_fields[] = $my_meta2->addTextarea($prefix.'job_description',array('name'=> 'Job Description '),true);
@@ -63,7 +62,10 @@ if (is_admin()){
   $repeater_fields[] = $my_meta2->addDate($prefix.'job_todate',array('name'=> 'End Date ', 'desc' =>'Use "PRESENT", if you are still employed'),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_employer',array('name'=> 'Employer Name '),true);
   $repeater_fields[] = $my_meta2->addText($prefix.'job_url',array('name'=> 'Employer Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields[] = $my_meta2->addText($prefix.'job_reference_letter',array('name'=> 'Reference Letter Name '),true);
+  $repeater_fields[][] = $my_meta2->addText($prefix.'job_reference_letter_url',array('name'=> 'Reference Letter Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
+  
   //Employment repeater block
   $my_meta2->addRepeaterBlock($prefix.'job_',array('inline' => true, 'name' => 'Enter your job info','fields' => $repeater_fields, 'sortable'=> true));
 
