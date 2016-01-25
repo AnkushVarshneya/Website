@@ -106,26 +106,26 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 								<?php echo $arr['resume_job_employer'] ?>
 							<?php } ?>
 							<br />
-							<?php if($arr['job_reference_letter']!='' && $arr['job_reference_letter_url']!='') { ?>
-							<a class="job-url" href="<?php echo $arr['job_reference_letter_url'] ?>" target="_blank">
-								<?php echo $arr['job_reference_letter'] ?>
+							<?php if($arr['resume_job_reference_letter']!='' && $arr['resume_job_reference_letter_url']!='') { ?>
+							<a class="job-url" href="<?php echo $arr['resume_job_reference_letter_url'] ?>" target="_blank">
+								<?php echo $arr['resume_job_reference_letter'] ?>
 							</a>
 							<?php }?>
 							<br />
-							<?php if($arr['job_intern_report_0']!='' && $arr['job_intern_report_url_0']!='') { ?>
+							<?php if($arr['resume_job_intern_report_0']!='' && $arr['resume_job_intern_report_url_0']!='') { ?>
 							<p class = "job-url"> Find out more about what I did in this job by clicking the links below.</p> <br/>
-							<a class="job-url" href="<?php echo $arr['job_reference_intern_report_url_0'] ?>" target="_blank">
-								<?php echo $arr['job_intern_report_0'] ?>
+							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_0'] ?>" target="_blank">
+								<?php echo $arr['resume_job_intern_report_0'] ?>
 							</a>
 							<?php }?>
-							<?php if($arr['job_intern_report_1']!='' && $arr['job_intern_report_url_1']!='') { ?>
-							<a class="job-url" href="<?php echo $arr['job_reference_intern_report_url_1'] ?>" target="_blank">
-								<?php echo $arr['job_intern_report_1'] ?>
+							<?php if($arr['resume_job_intern_report_1']!='' && $arr['resume_job_intern_report_url_1']!='') { ?>
+							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_1'] ?>" target="_blank">
+								<?php echo $arr['resume_job_intern_report_1'] ?>
 							</a>
 							<?php }?>
-							<?php if($arr['job_intern_report_2']!='' && $arr['job_intern_report_url_2']!='') { ?>
-							<a class="job-url" href="<?php echo $arr['job_reference_intern_report_url_2'] ?>" target="_blank">
-								<?php echo $arr['job_intern_report_2'] ?>
+							<?php if($arr['resume_job_intern_report_2']!='' && $arr['resume_job_intern_report_url_2']!='') { ?>
+							<a class="job-url" href="<?php echo $arr['resume_job_reference_intern_report_url_2'] ?>" target="_blank">
+								<?php echo $arr['resume_job_intern_report_2'] ?>
 							</a>
 							<?php }?>
 						</div>
