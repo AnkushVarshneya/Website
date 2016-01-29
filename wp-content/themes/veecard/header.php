@@ -64,9 +64,20 @@
                <?php } ?>
            </header>
 
-           	<?php if(of_get_option('veecard_bio_vcard') != '') { ?>
-            <a href="<?php echo of_get_option('veecard_bio_vcard') ?>" class="vcard"><?php _e("Download vCard", "site5framework"); ?></a>
-            <?php } ?>
+			<div class="col_half first">
+			  <?php if($_SERVER['REQUEST_URI'] =='/resume/resume/' && of_get_option('veecard_bio_vcard') != '') { ?>
+				<a href="<?php echo of_get_option('veecard_bio_paper_resume') ?>" class="vcardl"><?php _e("Download Paper Resume", "site5framework"); ?></a>
+			  <?php } ?>
+			  <?php if($_SERVER['REQUEST_URI'] =='/transcript/' && of_get_option('veecard_bio_vcard') != '') { ?>
+				<a href="<?php echo of_get_option('veecard_bio_transcript') ?>" class="vcardl"><?php _e("Download Transcript", "site5framework"); ?></a>
+			  <?php } ?>
+			</div>
+			<div class="col_half last">
+			  <?php if(of_get_option('veecard_bio_vcard') != '') { ?>
+				<a href="<?php echo of_get_option('veecard_bio_vcard') ?>" class="vcard"><?php _e("Download vCard", "site5framework"); ?></a>
+			  <?php } ?>
+			</div>
+
         </div>
 
 		<!-- .main-container -->

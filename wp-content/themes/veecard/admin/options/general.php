@@ -28,4 +28,15 @@ $options[] = array( "name" => "General",
                         "std" => "",
                         "type" => "upload");
 
+	$options[] = array( "name" => "Your Paper Resume File",
+                        "desc" => "You can upload your Paper Resume file. Click to 'Upload' button and upload your own Paper Resume file.",
+                        "id" => $shortname."_bio_paper_resume",
+                        "std" => "",
+                        "type" => "upload");
+						
+	$options[] = array( "name" => "Your Transcript File",
+                        "desc" => "You can upload your Transcript file. Click to 'Upload' button and upload your own Transcript file.",
+                        "id" => $shortname."_bio_transcript",
+                        "std" => "",
+                        "type" => "upload");
 ?>
