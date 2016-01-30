@@ -29,7 +29,7 @@
                             <li class="email-link"><a href="<?php echo of_get_option('veecard_email') ?>" class="email" id="social-06" title="<?php _e( 'Email Me!', 'site5framework' ); ?>">EMail</a></li>
 							<?php endif ?>
 							<?php if(of_get_option('veecard_stackoverflow')!='') : ?>
-                            <li class="stackoverflow-link"><a href="<?php echo of_get_option('veecard_stackoverflow') ?>" class="slackoverflow" id="social-07" title="<?php _e( 'See My Stack Over Flow!', 'site5framework' ); ?>">GitHub</a></li>
+                            <li class="stackoverflow-link"><a href="<?php echo of_get_option('veecard_stackoverflow') ?>" class="stackoverflow" id="social-07" title="<?php _e( 'See My Stack Over Flow!', 'site5framework' ); ?>">GitHub</a></li>
 							<?php endif ?>							
 							
 							<?php if(of_get_option('veecard_goodreads')!=''): ?>
