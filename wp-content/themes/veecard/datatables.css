@@ -4,7 +4,7 @@
  *
  * To rebuild or modify this file with the latest versions of the included
  * software please visit:
- *   https://datatables.net/download/#bs/jq-2.1.4,dt-1.10.10,b-1.1.0,b-colvis-1.1.0,cr-1.3.0,fh-3.1.0,r-2.0.0
+ *   https://datatables.net/download/#zf/jq-2.1.4,dt-1.10.10,b-1.1.0,b-colvis-1.1.0,cr-1.3.0,fh-3.1.0,r-2.0.0
  *
  * Included libraries:
  *   jQuery 2.1.4, DataTables 1.10.10, Buttons 1.1.0, Column visibility 1.1.0, ColReorder 1.3.0, FixedHeader 3.1.0, Responsive 2.0.0
@@ -12,9 +12,9 @@
 
 table.dataTable {
   clear: both;
-  margin-top: 6px !important;
-  margin-bottom: 6px !important;
+  margin: 0.5em 0 !important;
   max-width: none !important;
+  width: 100%;
 }
 table.dataTable td,
 table.dataTable th {
@@ -26,45 +26,38 @@ table.dataTable td.dataTables_empty,
 table.dataTable th.dataTables_empty {
   text-align: center;
 }
-table.dataTable.nowrap th,
-table.dataTable.nowrap td {
+table.dataTable.nowrap th, table.dataTable.nowrap td {
   white-space: nowrap;
 }
 
+div.dataTables_wrapper {
+  position: relative;
+}
 div.dataTables_wrapper div.dataTables_length label {
-  font-weight: normal;
+  float: left;
   text-align: left;
-  white-space: nowrap;
+  margin-bottom: 0;
 }
 div.dataTables_wrapper div.dataTables_length select {
   width: 75px;
-  display: inline-block;
-}
-div.dataTables_wrapper div.dataTables_filter {
-  text-align: right;
+  margin-bottom: 0;
 }
 div.dataTables_wrapper div.dataTables_filter label {
-  font-weight: normal;
-  white-space: nowrap;
-  text-align: left;
+  float: right;
+  margin-bottom: 0;
 }
 div.dataTables_wrapper div.dataTables_filter input {
+  display: inline-block !important;
+  width: auto !important;
+  margin-bottom: 0;
   margin-left: 0.5em;
-  display: inline-block;
-  width: auto;
 }
 div.dataTables_wrapper div.dataTables_info {
-  padding-top: 8px;
-  white-space: nowrap;
+  padding-top: 2px;
 }
 div.dataTables_wrapper div.dataTables_paginate {
+  float: right;
   margin: 0;
-  white-space: nowrap;
-  text-align: right;
-}
-div.dataTables_wrapper div.dataTables_paginate ul.pagination {
-  margin: 2px 0;
-  white-space: nowrap;
 }
 div.dataTables_wrapper div.dataTables_processing {
   position: absolute;
@@ -74,14 +67,14 @@ div.dataTables_wrapper div.dataTables_processing {
   margin-left: -100px;
   margin-top: -26px;
   text-align: center;
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
 table.dataTable thead > tr > td.sorting_asc,
 table.dataTable thead > tr > td.sorting_desc,
 table.dataTable thead > tr > td.sorting {
-  padding-right: 30px;
+  padding-right: 1.5rem;
 }
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
@@ -89,43 +82,34 @@ table.dataTable thead > tr > td:active {
 }
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  cursor: pointer;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
-  cursor: pointer;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: center right;
 }
-table.dataTable thead .sorting:after,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:after {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  display: block;
-  font-family: 'Glyphicons Halflings';
-  opacity: 0.5;
+table.dataTable thead .sorting {
+  background-image: url("DataTables-1.10.10/images/sort_both.png");
 }
-table.dataTable thead .sorting:after {
-  opacity: 0.2;
-  content: "\e150";
-  /* sort */
+table.dataTable thead .sorting_asc {
+  background-image: url("DataTables-1.10.10/images/sort_asc.png");
 }
-table.dataTable thead .sorting_asc:after {
-  content: "\e155";
-  /* sort-by-attributes */
+table.dataTable thead .sorting_desc {
+  background-image: url("DataTables-1.10.10/images/sort_desc.png");
 }
-table.dataTable thead .sorting_desc:after {
-  content: "\e156";
-  /* sort-by-attributes-alt */
+table.dataTable thead .sorting_asc_disabled {
+  background-image: url("DataTables-1.10.10/images/sort_asc_disabled.png");
 }
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:after {
-  color: #eee;
+table.dataTable thead .sorting_desc_disabled {
+  background-image: url("DataTables-1.10.10/images/sort_desc_disabled.png");
 }
 
-div.dataTables_scrollHead table.dataTable {
+div.dataTables_scrollHead table {
   margin-bottom: 0 !important;
 }
 
@@ -133,11 +117,6 @@ div.dataTables_scrollBody table {
   border-top: none;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-}
-div.dataTables_scrollBody table thead .sorting:after,
-div.dataTables_scrollBody table thead .sorting_asc:after,
-div.dataTables_scrollBody table thead .sorting_desc:after {
-  display: none;
 }
 div.dataTables_scrollBody table tbody tr:first-child th,
 div.dataTables_scrollBody table tbody tr:first-child td {
@@ -147,55 +126,6 @@ div.dataTables_scrollBody table tbody tr:first-child td {
 div.dataTables_scrollFoot table {
   margin-top: 0 !important;
   border-top: none;
-}
-
-@media screen and (max-width: 767px) {
-  div.dataTables_wrapper div.dataTables_length,
-  div.dataTables_wrapper div.dataTables_filter,
-  div.dataTables_wrapper div.dataTables_info,
-  div.dataTables_wrapper div.dataTables_paginate {
-    text-align: center;
-  }
-}
-table.dataTable.table-condensed > thead > tr > th {
-  padding-right: 20px;
-}
-table.dataTable.table-condensed .sorting:after,
-table.dataTable.table-condensed .sorting_asc:after,
-table.dataTable.table-condensed .sorting_desc:after {
-  top: 6px;
-  right: 6px;
-}
-
-table.table-bordered.dataTable {
-  border-collapse: separate !important;
-}
-table.table-bordered.dataTable th,
-table.table-bordered.dataTable td {
-  border-left-width: 0;
-}
-table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child,
-table.table-bordered.dataTable td:last-child,
-table.table-bordered.dataTable td:last-child {
-  border-right-width: 0;
-}
-table.table-bordered.dataTable tbody th,
-table.table-bordered.dataTable tbody td {
-  border-bottom-width: 0;
-}
-
-div.dataTables_scrollHead table.table-bordered {
-  border-bottom-width: 0;
-}
-
-div.table-responsive > div.dataTables_wrapper > div.row {
-  margin: 0;
-}
-div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:first-child {
-  padding-left: 0;
-}
-div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
-  padding-right: 0;
 }
 
 
@@ -224,36 +154,45 @@ div.dt-button-info > div {
   padding: 1em;
 }
 
-ul.dt-button-collection.dropdown-menu {
-  display: block;
-  z-index: 2002;
+ul.dt-buttons li {
+  margin: 0;
+}
+ul.dt-buttons li.active a {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+ul.dt-buttons.button-group a {
+  margin-bottom: 0;
+}
+
+ul.dt-button-collection.f-dropdown {
   -webkit-column-gap: 8px;
   -moz-column-gap: 8px;
   -ms-column-gap: 8px;
   -o-column-gap: 8px;
   column-gap: 8px;
 }
-ul.dt-button-collection.dropdown-menu.fixed {
+ul.dt-button-collection.f-dropdown.fixed {
   position: fixed;
   top: 50%;
   left: 50%;
   margin-left: -75px;
   border-radius: 0;
 }
-ul.dt-button-collection.dropdown-menu.fixed.two-column {
+ul.dt-button-collection.f-dropdown.fixed.two-column {
   margin-left: -150px;
 }
-ul.dt-button-collection.dropdown-menu.fixed.three-column {
+ul.dt-button-collection.f-dropdown.fixed.three-column {
   margin-left: -225px;
 }
-ul.dt-button-collection.dropdown-menu.fixed.four-column {
+ul.dt-button-collection.f-dropdown.fixed.four-column {
   margin-left: -300px;
 }
-ul.dt-button-collection.dropdown-menu > * {
+ul.dt-button-collection.f-dropdown > * {
   -webkit-column-break-inside: avoid;
   break-inside: avoid;
 }
-ul.dt-button-collection.dropdown-menu.two-column {
+ul.dt-button-collection.f-dropdown.two-column {
   width: 300px;
   padding-bottom: 1px;
   -webkit-column-count: 2;
@@ -262,7 +201,7 @@ ul.dt-button-collection.dropdown-menu.two-column {
   -o-column-count: 2;
   column-count: 2;
 }
-ul.dt-button-collection.dropdown-menu.three-column {
+ul.dt-button-collection.f-dropdown.three-column {
   width: 450px;
   padding-bottom: 1px;
   -webkit-column-count: 3;
@@ -271,7 +210,7 @@ ul.dt-button-collection.dropdown-menu.three-column {
   -o-column-count: 3;
   column-count: 3;
 }
-ul.dt-button-collection.dropdown-menu.four-column {
+ul.dt-button-collection.f-dropdown.four-column {
   width: 600px;
   padding-bottom: 1px;
   -webkit-column-count: 4;
@@ -280,6 +219,12 @@ ul.dt-button-collection.dropdown-menu.four-column {
   -o-column-count: 4;
   column-count: 4;
 }
+ul.dt-button-collection.f-dropdown.fixed {
+  max-width: none;
+}
+ul.dt-button-collection.f-dropdown.fixed:before, ul.dt-button-collection.f-dropdown.fixed:after {
+  display: none;
+}
 
 div.dt-button-background {
   position: fixed;
@@ -287,17 +232,17 @@ div.dt-button-background {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2001;
+  z-index: 88;
 }
 
 @media screen and (max-width: 767px) {
-  div.dt-buttons {
+  ul.dt-buttons {
     float: none;
     width: 100%;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
   }
-  div.dt-buttons a.btn {
+  ul.dt-buttons li {
     float: none;
   }
 }
@@ -310,7 +255,7 @@ table.DTCR_clonedTable {
 
 div.DTCR_pointer {
   width: 1px;
-  background-color: #337ab7;
+  background-color: #008CBA;
   z-index: 201;
 }
 
@@ -370,7 +315,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
   text-indent: 4px;
   line-height: 16px;
   content: '+';
-  background-color: #337ab7;
+  background-color: #008CBA;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
@@ -418,7 +363,7 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
   text-indent: 4px;
   line-height: 16px;
   content: '+';
-  background-color: #337ab7;
+  background-color: #008CBA;
 }
 table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before {
@@ -514,6 +459,9 @@ div.dtr-modal div.dtr-modal-background {
   div.dtr-modal div.dtr-modal-display {
     width: 95%;
   }
+}
+table.dataTable > tbody > tr.child ul {
+  font-size: 1em;
 }
 
 
