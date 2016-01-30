@@ -1472,10 +1472,10 @@ margin: 0 auto;
 		margin-right:0px:
     }
 	#social-links li:not(:first-child) {
-		margin-left:4px;
+		margin-left:2px;
     }	
 	#social-links li:not(:last-child) {
-		margin-right:4px;
+		margin-right:2px;
     }
 	
 
