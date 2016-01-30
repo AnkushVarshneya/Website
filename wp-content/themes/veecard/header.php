@@ -17,7 +17,7 @@
 	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
 	<!-- stylesheet -->
 
-	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\datatables.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\datatable\datatables.js'; ?>"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\transcript.js'; ?>"></script>
 
 	<!-- patterns -->
