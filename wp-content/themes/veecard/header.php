@@ -17,6 +17,9 @@
 	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
 	<!-- stylesheet -->
 
+	<script type="text/javascript" src="datatables.js"></script>
+	<script type="text/javascript" src="transcript.js"></script>
+
 	<!-- patterns -->
 	<?php if(of_get_option('veecard_blog_pattern') !== 'default') { ?>
 	<style type="text/css">.main, .main-container {background: url('<?php echo get_template_directory_uri(); ?>/images/patterns/<?php echo of_get_option('veecard_blog_pattern') ?>.png') left top repeat !important;}</style>

@@ -1707,3 +1707,110 @@ blockquote cite {
 	display: inline;
 	color: #0092C4;
 }
+
+/* transcript style */
+
+/* Table description */
+.transcript-table-description {
+	clear: both;
+	display: block;
+}
+
+.transcript {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin-bottom: 1em;
+	border: none;
+}
+
+.transcript th,
+.transcript td {
+	padding: 8px;
+	border: none;
+	background: none;
+	text-align: left;
+	float: none !important;
+}
+.transcript tbody td {
+	vertical-align: top;
+}
+
+/* Horizontal borders */
+.transcript tbody td,
+.transcript tfoot th {
+	border-top: 1px solid #dddddd;
+}
+.transcript tbody tr:first-child td {
+	border-top: 0;
+}
+.transcript thead th {
+	border-bottom: 1px solid #dddddd;
+}
+
+/* Row background colors */
+.transcript thead th,
+.transcript tfoot th {
+	background-color: #d9edf7;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.transcript .odd td {
+	background-color: #f9f9f9;
+}
+.transcript .even td {
+	background-color: #ffffff;
+}
+.transcript .row-hover tr:hover td {
+	background-color: #f3f3f3;
+}
+
+/* Reset image layout in tables */
+.transcript img {
+	margin: 0;
+	padding: 0;
+	border: none;
+	max-width: none;
+}
+
+
+/* Sorting */
+.transcript .sorting,
+.transcript .sorting_asc,
+.transcript .sorting_desc {
+	position: relative;
+	padding-right: 20px; /* more right padding for sort arrows */
+	cursor: pointer;
+	outline: none;
+}
+.transcript .sorting:after,
+.transcript .sorting_asc:after,
+.transcript .sorting_desc:after {
+	font-family: TablePress;
+	font-weight: normal;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: 6px;
+	margin: auto;
+	height: 14px;
+	line-height: 1;
+}
+.transcript .sorting:after {
+	content: "\f0dc";
+}
+.transcript .sorting_asc:after {
+	content: "\f0d8";
+	padding: 0 0 2px;
+}
+.transcript .sorting_desc:after {
+	content: "\f0d7";
+}
+.transcript .sorting:hover,
+.transcript .sorting_asc,
+.transcript .sorting_desc {
+	background-color: #049cdb;
+}
