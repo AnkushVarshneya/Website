@@ -371,14 +371,16 @@ h1.title {
   margin:0;
   padding:0;
 }
-#social-links li:not(:first-child) {
+#social-links li {
   display: block;
   text-indent: -9999px;
   width: 32px;
   height: 32px;
+  padding: 0;
+}
+#social-links li:not(:first-child) {
   margin-left: 4px;
   margin-top: 10px;
-  padding: 0;
 }
 #social-links li a {
   display: block;
