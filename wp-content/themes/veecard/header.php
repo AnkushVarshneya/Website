@@ -14,7 +14,7 @@
 	<meta name="description" content="<?php echo of_get_option('veecard_metadescription'); ?>" />
 
 	<!-- stylesheet -->
-	<link rel="stylesheet" media="all" href=""/>
+	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
 	<!-- stylesheet -->
 
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory').'\datatables.js'; ?>"></script>
