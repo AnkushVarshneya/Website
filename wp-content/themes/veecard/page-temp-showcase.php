@@ -45,7 +45,7 @@ get_header(); ?>
 				global $post;
 							$term = get_query_var('term');
        						$tax = get_query_var('taxonomy');
-							$args=array('post_type'=> 'portfolio','post_status'=> 'publish', 'orderby'=> 'menu_order', 'caller_get_posts'=>1, 'paged'=>$paged, 'posts_per_page'=>9);
+							$args=array('post_type'=> 'portfolio','post_status'=> 'publish', 'order' => 'ASC', 'orderby'=> 'post_date', 'caller_get_posts'=>1, 'paged'=>$paged, 'posts_per_page'=>15);
 							$taxargs = array($tax=>$term);
 							if($term!='' && $tax!='') { $args  = array_merge($args, $taxargs); }
 
