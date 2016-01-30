@@ -376,11 +376,8 @@ h1.title {
   text-indent: -9999px;
   width: 32px;
   height: 32px;
+  margin: 5px;
   padding: 0;
-}
-#social-links li:not(:first-child) {
-  margin-left: 4px;
-  margin-top: 10px;
 }
 #social-links li a {
   display: block;
@@ -1467,6 +1464,17 @@ margin: 0 auto;
       float: left;
       position: static;
     }
+	
+    #social-links li:first-child {
+		margin-left:0px;
+    }
+	#social-links li:last-child {
+		margin-right:0px:
+    }
+	#social-links li:not(:first-child) {
+		margin-left:10px;
+    }
+	
 
     .column-right, 
     .column-left {
