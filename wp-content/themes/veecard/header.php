@@ -14,11 +14,11 @@
 	<meta name="description" content="<?php echo of_get_option('veecard_metadescription'); ?>" />
 
 	<!-- stylesheet -->
-	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
+	<link rel="stylesheet" media="all" href=""/>
 	<!-- stylesheet -->
 
-	<script type="text/javascript" src="datatables.js"></script>
-	<script type="text/javascript" src="transcript.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory').'\datatables.js'; ?>"></script>
+	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory').'\transcript.js'; ?>"></script>
 
 	<!-- patterns -->
 	<?php if(of_get_option('veecard_blog_pattern') !== 'default') { ?>
