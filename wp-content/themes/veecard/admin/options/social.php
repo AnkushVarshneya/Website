@@ -27,6 +27,16 @@
                         "id" => $shortname."_googleplus",
                         "std" => "",
                         "type" => "text");
+					
+	$options[] = array( "name" => "Email URL",
+                        "id" => $shortname."_email",
+                        "std" => "",
+                        "type" => "text");
+
+	$options[] = array( "name" => "Stack Over Flow URL",
+                        "id" => $shortname."_stackoverflow",
+                        "std" => "",
+                        "type" => "text");
 
 	$options[] = array( "name" => "Good Reads URL",
                         "id" => $shortname."_goodreads",
