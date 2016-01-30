@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+	// set flag for all posts
+	$see_all_posts = false;
+ ?>
 
 		
 		<div class="column-left">
@@ -19,7 +22,11 @@
 				<?php } elseif (is_search()) { ?>
 				    	<?php _e("Search Results", "site5framework"); ?> / <span><?php echo esc_attr(get_search_query()); ?></span> 
 				<?php } else { ?>
-						<?php the_title() ?>
+					<?php
+						the_title();
+						// set flag
+						$see_all_posts = true;
+					?>
 				<?php } ?>
 			</h1>
 			
@@ -33,14 +40,19 @@
 			$paged = 1;
 
 			
-			
-			$args = array(
-			'post_type' => 'post',
-			'paged' => $paged );
-			
-			global $wp_query;
-			$args = array_merge( $wp_query->query_vars, $args );
-			query_posts($args);
+			if($see_all_posts == false) {
+				$args = array(
+				'post_type' => 'post',
+				'paged' => $paged );
+				
+				global $wp_query;
+				$args = array_merge( $wp_query->query_vars, $args );
+				query_posts($args);
+			}
+			else{
+				query_posts();
+			}			
+				
 			?>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
