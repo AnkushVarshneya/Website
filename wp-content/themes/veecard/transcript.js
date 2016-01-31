@@ -14,7 +14,7 @@ $(document).ready(function() {
 			$("#title-right").addClass("column-right");
 			var $input = $("#DataTables_Table_0_filter > label > input")
 			$input.appendTo("#title-right");
-			//$input.css("float", "right");
+			$input.addClass("widget_search");
 			$("#DataTables_Table_0_filter").hide();
 		}
 	} );
