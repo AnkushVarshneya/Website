@@ -9,6 +9,12 @@ $options[] = array( "name" => "Homepage",
                         "std" => "Martin Smith",
                         "type" => "text");
 
+	$options[] = array( "name" => "Homepage Name Display",
+                        "desc" => "Want to display it?",
+                        "id" => $shortname."_home_name_display",
+                        "std" => "1",
+                        "type" => "checkbox");
+						
  	$options[] = array( "name" => "Homepage Short Bio Info",
                         "desc" => "Enter your short bio info for homepage. (ex: Hello, I'm Martin, Senior Web Designer, working in the field for about 9 years now. I'm 34 years old, married, living in Bucharest, Romania.)",
                         "id" => $shortname."_home_teaser",
