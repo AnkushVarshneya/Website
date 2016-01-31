@@ -1073,6 +1073,7 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
+input[type="search"],
 textarea {
     background: #666666 url('../images/bg_pattern_light.png') left top repeat;
     border:none;
