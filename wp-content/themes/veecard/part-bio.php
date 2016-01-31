@@ -1,7 +1,9 @@
  <header>
     <div class="bio-header clearfix">
         <div class="col_half first">
-            <?php if(of_get_option('veecard_home_name') != '') { ?><h1 class="bio-title"><?php echo of_get_option('veecard_home_name') ?></h1><?php } ?>
+            <?php if(of_get_option('veecard_home_name') != '') { ?><h1 class="bio-title"><?php echo of_get_option('veecard_home_name') ?></h1><?php } 
+			else { ?><h1 class="bio-title"><?php echo get_post_meta($post->ID,'resume_bio_name',true) ?></h1><?php }			
+			?>
             <?php if(of_get_option('veecard_home_address') != '') { ?><span class="bio-location"><?php echo of_get_option('veecard_home_address') ?></span><?php } ?>
         </div>
 
@@ -19,8 +21,8 @@
             </div>
             <?php } ?>
             <div class="bio-info">
-                <?php if(of_get_option('veecard_home_phone') == '') { ?><span class="bio-phone"><?php echo of_get_option('veecard_home_phone') ?></span><?php } ?>
-                <?php if(of_get_option('veecard_home_email') == '') { ?><span class="bio-email"><?php echo of_get_option('veecard_home_email') ?></span><?php } ?>
+                <?php if(of_get_option('veecard_home_phone') != '') { ?><span class="bio-phone"><?php echo of_get_option('veecard_home_phone') ?></span><?php } ?>
+                <?php if(of_get_option('veecard_home_email') != '') { ?><span class="bio-email"><?php echo of_get_option('veecard_home_email') ?></span><?php } ?>
             </div>
 
         </div>
