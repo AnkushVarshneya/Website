@@ -914,7 +914,7 @@ width:30%;
 .widget_search .screen-reader-text {
   display: none;
 }
-.form-control,.widget_search #s {
+.widget_search #s {
   width:100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1707,4 +1707,12 @@ blockquote p:first-child {
 blockquote cite {
 	display: inline;
 	color: #0092C4;
+}
+
+.form-control {
+  width:100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #EFEFEF url("../images/ico_search.png") 96% 50% no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 }
