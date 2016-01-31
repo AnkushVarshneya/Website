@@ -74,7 +74,7 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		               			<?php } ?>
 								
 								<?php if ($arr['resume_edu_mark_url']!="") {?>
-								To see my transcript click the link below:
+								<p class = "job-url"><br/><br/>View my transcript from this degree click the link below:</p>
 								<a class="job-url" href="<?php echo $arr['resume_edu_mark_url'] ?>" target="_blank">
 									<?php echo $arr['resume_edu_mark_title'] ?>
 		               			</a>
