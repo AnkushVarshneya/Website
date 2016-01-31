@@ -13,8 +13,6 @@ $(document).ready(function() {
 			$("#title-left").addClass("column-left");		
 			$("#title-right").addClass("column-right");
 			var $input = $("#DataTables_Table_0_filter > label > input");
-			$input.addClass("widget_search");
-			$input.attr("id", "#s");			
 			$input.appendTo("#title-right");
 			//$input.css("float", "right");
 			$("#DataTables_Table_0_filter").hide();
