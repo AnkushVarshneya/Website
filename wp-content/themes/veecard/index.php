@@ -37,7 +37,9 @@
            <!-- home bio info -->
            <div id="bio">
                <ul class="clearfix">
+				<?php if(of_get_option('veecard_home_name_display') == '1') {?>
                    <?php if(of_get_option('veecard_home_name')     != '') { ?><li><?php _e('Name','site5framework') ?>: <?php echo of_get_option('veecard_home_name') ?></li><?php } ?>
+				<?php } ?>
                    <?php if(of_get_option('veecard_home_email')    != '') { ?><li><?php _e('Email','site5framework') ?>: <?php echo of_get_option('veecard_home_email') ?></li><?php } ?>
                    <?php if(of_get_option('veecard_home_birthday') != '') { ?><li><?php _e('Birthday','site5framework') ?>: <?php echo of_get_option('veecard_home_birthday') ?></li><?php } ?>
                    <?php if(of_get_option('veecard_home_phone')    != '') { ?><li><?php _e('Phone','site5framework') ?>: <?php echo of_get_option('veecard_home_phone') ?></li><?php } ?>
