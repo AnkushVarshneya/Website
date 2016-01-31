@@ -1708,11 +1708,3 @@ blockquote cite {
 	display: inline;
 	color: #0092C4;
 }
-
-.form-control {
-  width:100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #EFEFEF url("../images/ico_search.png") 96% 50% no-repeat;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-}
