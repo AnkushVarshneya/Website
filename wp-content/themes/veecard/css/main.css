@@ -355,7 +355,7 @@ h1.title {
     border-top:none;
 }
 
-#bio ul li:nth-child(2n+1) {
+#bio:not(:.no-align) ul li:nth-child(2n+1) {
     text-align: right;
 }
 
