@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.transcript').DataTable( {
+	var table = $('.transcript').DataTable( {
 		"paging": false, // disable paging
 		"order": [], // no ordering by default
 		"colReorder": true,
@@ -17,5 +17,9 @@ $(document).ready(function() {
 			//$input.css("float", "right");
 			$("#DataTables_Table_0_filter").hide();
 		}
+	} );
+	
+	$(window).on('resize', function () {
+		table.fnAdjustColumnSizing();
 	} );
 } );

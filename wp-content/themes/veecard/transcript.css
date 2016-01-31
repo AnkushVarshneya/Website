@@ -40,21 +40,10 @@
 	border-bottom: 1px solid #dddddd;
 }
 
-/* Row background colors */
 .transcript thead th,
 .transcript tfoot th {
-	background-color: #d9edf7;
 	font-weight: bold;
 	vertical-align: middle;
-}
-.transcript .odd td {
-	background-color: #f9f9f9;
-}
-.transcript .even td {
-	background-color: #ffffff;
-}
-.transcript .row-hover tr:hover td {
-	background-color: #f3f3f3;
 }
 
 /* Reset image layout in tables */
