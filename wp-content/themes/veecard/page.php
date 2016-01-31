@@ -4,9 +4,13 @@
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<header>
-				<h1><?php the_title(); ?></h1>
-			</header>
+			<div id="title-left">
+				<header>
+					<h1><?php the_title(); ?></h1>
+				</header>
+			</div>
+			<div id="title-right">
+			</div>		
 
 			<?php the_content(); ?>
 

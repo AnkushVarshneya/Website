@@ -13,3 +13,4 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 @import url('css/normalize.min.css');
 @import url('css/main.css'); 
 @import url('datatable/datatables.css'); 
+@import url('transcript.css');
