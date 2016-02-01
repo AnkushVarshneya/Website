@@ -73,8 +73,8 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		               				<?php echo $arr['resume_edu_school'] ?>
 		               			<?php } ?>
 								
-								<br/>
-								
+								<br/><br/>
+							
 								<?php if ($arr['resume_edu_mark_title']!="" && $arr['resume_edu_mark_url']!="") {?>
 								<p class = "job-url">
 									View my transcript from this degree click the link below:
@@ -118,7 +118,7 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 								<?php echo $arr['resume_job_employer'] ?>
 							<?php } ?>
 							
-							<br/>
+							<br/><br/>
 							
 							<?php if($arr['resume_job_reference_letter']!='' && $arr['resume_job_reference_letter_url']!='') { ?>
 							<p class = "job-url">
