@@ -73,13 +73,17 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 		               				<?php echo $arr['resume_edu_school'] ?>
 		               			<?php } ?>
 								
-								<?php if ($arr['resume_edu_mark_url']!="") {?>
-								<p class = "job-url"><br/><br/>View my transcript from this degree click the link below:</p>
-								<a class="job-url" href="<?php echo $arr['resume_edu_mark_url'] ?>" target="_blank">
-									<?php echo $arr['resume_edu_mark_title'] ?>
-		               			</a>
-								<?php }?>
+								<br/>
 								
+								<?php if ($arr['resume_edu_mark_title']!="" && $arr['resume_edu_mark_url']!="") {?>
+								<p class = "job-url">
+									View my transcript from this degree click the link below:
+									<br/>
+									<a class="job-url" href="<?php echo $arr['resume_edu_mark_url'] ?>" target="_blank">
+										<?php echo $arr['resume_edu_mark_title'] ?>
+									</a>						
+								</p>								
+								<?php }?>
 		           			 </div>
 							<div class="col_half">
 							   <p><?php echo $arr['resume_edu_grade'] ?></p>
@@ -114,30 +118,38 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 								<?php echo $arr['resume_job_employer'] ?>
 							<?php } ?>
 							
+							<br/>
+							
 							<?php if($arr['resume_job_reference_letter']!='' && $arr['resume_job_reference_letter_url']!='') { ?>
-							<p class = "job-url"><br/><br/>View my reference letter from this job by clicking the link(s) below:</p>
-							<a class="job-url" href="<?php echo $arr['resume_job_reference_letter_url'] ?>" target="_blank">
-								<?php echo $arr['resume_job_reference_letter'] ?>
-							</a><br />
+							<p class = "job-url">
+								View my reference letter from this job by clicking the link(s) below:
+								<br/>							
+								<a class="job-url" href="<?php echo $arr['resume_job_reference_letter_url'] ?>" target="_blank">
+									<?php echo $arr['resume_job_reference_letter'] ?>
+								</a>								
+							</p>
 							<?php }?>
 							
 							<?php if($arr['resume_job_intern_report_0']!='' && $arr['resume_job_intern_report_url_0']!='') { ?>
-							<p class = "job-url"><br/><br/>Find out more about what I did in this job by clicking the link(s) below:</p>
-							<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_0'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_0'] ?>
-							</a> <br/>
-							<?php }?>
-							
+							<p class = "job-url">
+								Find out more about what I did in this job by clicking the link(s) below:
+								<br/>
+								<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_0'] ?>" target="_blank">
+									<?php echo $arr['resume_job_intern_report_0'] ?>
+								</a>
 							<?php if($arr['resume_job_intern_report_1']!='' && $arr['resume_job_intern_report_url_1']!='') { ?>
-							<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_1'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_1'] ?>
-							</a> <br/>
+								<br/>
+								<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_1'] ?>" target="_blank">
+									<?php echo $arr['resume_job_intern_report_1'] ?>
+								</a>
 							<?php }?>
-							
 							<?php if($arr['resume_job_intern_report_2']!='' && $arr['resume_job_intern_report_url_2']!='') { ?>
-							<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_2'] ?>" target="_blank">
-								<?php echo $arr['resume_job_intern_report_2'] ?>
-							</a> <br/>
+								<br/>
+								<a class="job-url" href="<?php echo $arr['resume_job_intern_report_url_2'] ?>" target="_blank">
+									<?php echo $arr['resume_job_intern_report_2'] ?>
+								</a>
+							<?php }?>
+							</p>
 							<?php }?>
 						</div>
 						<div class="col_half">
