@@ -11,7 +11,7 @@
 	<title><?php wp_title(' | ', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="keywords" content="<?php echo of_get_option('veecard_metakeywords'); ?>" />
-	<meta name="description" content="<?php echo of_get_option('veecard_metadescription'); ?>" />
+	
 
 	<!-- stylesheet -->
 	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
