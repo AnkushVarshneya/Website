@@ -195,6 +195,8 @@ if (is_admin()){
   $repeater_fields6[] = $my_meta6->addDate($prefix.'project_todate',array('name'=> 'End Date ', 'desc' =>'Use "PRESENT", if you are still Project'),true);
   $repeater_fields6[] = $my_meta6->addText($prefix.'project_name',array('name'=> 'Project Name '),true);
   $repeater_fields6[] = $my_meta6->addText($prefix.'project_url',array('name'=> 'Project Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
+  $repeater_fields6[] = $my_meta6->addText($prefix.'project_blog',array('name'=> 'Project Blog '),true);
+  $repeater_fields6[] = $my_meta6->addText($prefix.'project_blog_url',array('name'=> 'Project Blog Url ', 'desc'=>'Make sure to include http:// in the URL'),true);
 
   //Project repeater block
   $my_meta6->addRepeaterBlock($prefix.'project_',array('inline' => true, 'name' => 'Enter your project info','fields' => $repeater_fields6, 'sortable'=> true));

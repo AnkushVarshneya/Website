@@ -16,10 +16,17 @@
 	<!-- stylesheet -->
 	<link rel="stylesheet" media="all" href="<?php bloginfo('stylesheet_url'); ?>"/>
 	<!-- stylesheet -->
+	
+	<?php if($_SERVER['REQUEST_URI'] =='/transcript/' && of_get_option('veecard_bio_vcard') != '') { ?>
+	<!-- datatable -->
+	<link rel="stylesheet" media="all" href="<?php echo bloginfo('stylesheet_directory').'\datatable\datatables.min.css'; ?>"/>
+	<link rel="stylesheet" media="all" href="<?php echo bloginfo('stylesheet_directory').'\transcript.css'; ?>"/>
 
-	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\datatable\datatables.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\datatable\datatables.min.js'; ?>"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory').'\transcript.js'; ?>"></script>
-
+	<!-- datatable -->
+	<?php } ?>
+	
 	<!-- patterns -->
 	<?php if(of_get_option('veecard_blog_pattern') !== 'default') { ?>
 	<style type="text/css">.main, .main-container {background: url('<?php echo get_template_directory_uri(); ?>/images/patterns/<?php echo of_get_option('veecard_blog_pattern') ?>.png') left top repeat !important;}</style>

@@ -185,10 +185,18 @@ $bio_url = get_post_meta($post->ID,'resumebio_bio_url',true);
 								<h3 class="project-title"><?php echo $arr['resume_project_title'] ?></h3>
 		               			<?php if($arr['resume_project_url']!='') { ?>
 		               			<a class="project-url" href="<?php echo $arr['resume_project_url'] ?>" target="_blank">
-		               				<?php echo $arr['resume_project_name'] ?>
+		               				<?php echo $arr['resume_project_name'] ?><br/>
 		               			</a>
 		               			<?php } else { ?>
-		               				<?php echo $arr['resume_project_name'] ?>
+		               				<?php echo $arr['resume_project_name'] ?><br/>
+		               			<?php } ?>
+					
+								<?php if($arr['resume_project_blog_url']!='') { ?>
+		               			<a class="project-url" href="<?php echo $arr['resume_project_blog_url'] ?>" target="_blank">
+		               				<?php echo $arr['resume_project_blog'] ?>
+		               			</a>
+		               			<?php } else { ?>
+		               				<?php echo $arr['resume_project_blog'] ?>
 		               			<?php } ?>
 		           			 </div>
 							<div class="col_half">

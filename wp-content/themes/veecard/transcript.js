@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var table = $('.transcript').DataTable( {
+	var table = $('.transcript').dataTable( {
 		"paging": false, // disable paging
 		"order": [], // no ordering by default
 		"colReorder": true,
