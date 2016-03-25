@@ -394,11 +394,26 @@ h1.title {
   background-color: #0092C4;
 }
 
+ul#social-links li  a.github {  background: url("../images/icons/github.png") }
+ul#social-links li  a.linkedin {  background-image: url("../images/icons/linkedin.png") }
+ul#social-links li  a.twitter {  background-image: url("../images/icons/twitter.png") }
+ul#social-links li  a.facebook {  background-image: url("../images/icons/facebook.png") }
+ul#social-links li  a.google {  background-image: url("../images/icons/google.png") }
+ul#social-links li  a.email {  background-image: url("../images/icons/email.png") }
+ul#social-links li  a.stackoverflow {  background-image: url("../images/icons/stackoverflow.png") }
+ul#social-links li  a.goodreads {  background-image: url("../images/icons/goodreads.png") }
+ul#social-links li  a.dribbble {  background-image: url("../images/icons/dribbble.png") }
+ul#social-links li  a.vimeo {  background-image: url("../images/icons/vimeo.png") }
+ul#social-links li  a.skype {  background-image: url("../images/icons/skype.png") }
+ul#social-links li  a.pinterest {  background-image: url("../images/icons/pinterest.png") }
+ul#social-links li  a.rss {  background-image: url("../images/icons/rss.png")
+
+/*
 ul#social-links li  a.github, ul#social-links li  a.linkedin, ul#social-links li  a.twitter, ul#social-links li  a.facebook, ul#social-links li  a.google, ul#social-links li  a.email, ul#social-links li  a.stackoverflow, ul#social-links li  a.goodreads, ul#social-links li  a.dribbble, ul#social-links li  a.vimeo, ul#social-links li  a.skype, ul#social-links li  a.pinterest, ul#social-links li  a.rss {
 	background: url("../images/icons/sprites.png") no-repeat;
 	background-color: #000000;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 
 ul#social-links li  a.github { background-position: 0 0; }
@@ -414,6 +429,7 @@ ul#social-links li  a.vimeo { background-position: -180px 0; }
 ul#social-links li  a.skype { background-position: -200px 0; }
 ul#social-links li  a.pinterest { background-position: -220px 0; }
 ul#social-links li  a.rss { background-position: -240px 0; }
+*/
 
 /* ===============
    RESUME
