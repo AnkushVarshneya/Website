@@ -395,7 +395,7 @@ h1.title {
 }
 
 ul#social-links li  a.github, ul#social-links li  a.linkedin, ul#social-links li  a.twitter, ul#social-links li  a.facebook, ul#social-links li  a.google, ul#social-links li  a.email, ul#social-links li  a.stackoverflow, ul#social-links li  a.goodreads, ul#social-links li  a.dribbble, ul#social-links li  a.vimeo, ul#social-links li  a.skype, ul#social-links li  a.pinterest, ul#social-links li  a.rss {
-	background-image: url("../images/icons/sprites.png") no-repeat;
+	background: url("../images/icons/sprites.png") no-repeat;
 	width: 20px;
 	height: 20px;
 }
