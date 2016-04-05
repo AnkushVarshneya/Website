@@ -50,7 +50,7 @@
 				query_posts($args);
 			}
 			else{
-				query_posts();
+				query_posts(array('posts_per_page' => -1));
 			}			
 				
 			?>
