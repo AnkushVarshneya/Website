@@ -7,6 +7,7 @@ div.pdfemb-viewer {
 	border: 1px solid black;
 	position: relative;
 	text-align: left;
+	direction: ltr;
 }
 
 div.pdfemb-inner-div {
@@ -134,7 +135,7 @@ div.pdfemb-toolbar-bottom {
 	padding-top: 1px;
 }
 
-div.pdfemb-toolbar button {
+div.pdfemb-toolbar button, div.pdfemb-toolbar button[disabled] {
 	background-color: hsla(0,0%,0%,.12);
 	background-image: linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,100%,0));
 	background-clip: padding-box;
