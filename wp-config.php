@@ -18,20 +18,21 @@
  * @package WordPress
  */
 
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define('WPCACHEHOME', 'D:\home\site\wwwroot\wp-content\plugins\wp-super-cache/'); //Added by WP-Cache Manager
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true); //Added by WP-Cache Manager
-define( 'WPCACHEHOME', 'D:\home\site\wwwroot\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
-define('DB_NAME', 'AnkushVarshneyaDB');
+define('DB_NAME', '**');
 
 /** MySQL database username */
-define('DB_USER', 'b72b61aec30c00');
+define('DB_USER', '**');
 
 /** MySQL database password */
-define('DB_PASSWORD', '65d441bf');
+define('DB_PASSWORD', '**');
 
 /** MySQL hostname */
-define('DB_HOST', 'us-cdbr-azure-east-a.cloudapp.net');
+define('DB_HOST', '**');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
